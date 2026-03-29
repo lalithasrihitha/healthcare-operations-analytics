@@ -1,10 +1,10 @@
-# 🏥 Healthcare Operations & Revenue Cycle Analytics — MySQL
+#  Healthcare Operations & Revenue Cycle Analytics — MySQL
 
 ![MySQL](https://img.shields.io/badge/MySQL-8.0-blue) ![SQL](https://img.shields.io/badge/SQL-Advanced-green) ![Healthcare](https://img.shields.io/badge/Domain-Healthcare%20Analytics-red) ![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
 
 ---
 
-## 📌 Project Overview
+##  Project Overview
 
 This project is a comprehensive, end-to-end SQL analytics case study built on a healthcare dataset of **55,500 patient records** using MySQL and MySQL Workbench. The goal was to simulate the real-world analytical workflow of a Health Data Analyst working within a hospital operations and revenue cycle environment — starting from raw data ingestion and quality assessment, through to advanced reporting infrastructure using views and stored procedures.
 
@@ -12,7 +12,7 @@ The project is structured across **7 focused SQL files**, each targeting a disti
 
 ---
 
-## 📂 Repository Structure
+##  Repository Structure
 
 ```
 healthcare-operations-analytics-sql-powerbi/
@@ -30,7 +30,7 @@ healthcare-operations-analytics-sql-powerbi/
 
 ---
 
-## 📊 Dataset
+##  Dataset
 
 | Attribute | Details |
 |---|---|
@@ -45,7 +45,7 @@ healthcare-operations-analytics-sql-powerbi/
 
 ---
 
-## 🛠️ Tools & Technologies
+##  Tools & Technologies
 
 | Tool | Purpose |
 |---|---|
@@ -56,7 +56,7 @@ healthcare-operations-analytics-sql-powerbi/
 
 ---
 
-## 🧠 SQL Skills Demonstrated
+##  SQL Skills Demonstrated
 
 | Category | Skills |
 |---|---|
@@ -76,14 +76,14 @@ healthcare-operations-analytics-sql-powerbi/
 
 ---
 
-## 📋 Module Summary
+##  Module Summary
 
-### 📁 TABLE.sql — Database Setup
+###  TABLE.sql — Database Setup
 Created the `healthcare_project` database and `patients` table with appropriate data types — VARCHAR, INT, DATE, DECIMAL — for all 15 columns. Data loaded via MySQL Workbench Table Data Import Wizard.
 
 ---
 
-### 📁 DATA.sql — Patient Demographics Analysis
+###  DATA.sql — Patient Demographics Analysis
 **Business Question:** Who are our patients?
 
 Analyzed patient demographics across gender, age groups, medical conditions, blood types, insurance providers, and admission types using SELECT, GROUP BY, COUNT, ROUND, CASE WHEN, BETWEEN, and window function-based percentage calculations.
@@ -99,7 +99,7 @@ Analyzed patient demographics across gender, age groups, medical conditions, blo
 
 ---
 
-### 📁 DATA_CLEANING.sql — Data Cleaning & Date Analytics
+###  DATA_CLEANING.sql — Data Cleaning & Date Analytics
 **Business Question:** How do we fix data quality issues and extract time-based insights?
 
 Identified and corrected inconsistent patient name capitalization across all 55,500 records using UPPER, LOWER, SUBSTRING, SUBSTRING_INDEX, CONCAT, and UPDATE. Calculated length of stay using DATEDIFF, analyzed admission trends using YEAR(), and performed clinical risk stratification using CASE WHEN with IN operator.
@@ -114,7 +114,7 @@ Identified and corrected inconsistent patient name capitalization across all 55,
 
 ---
 
-### 📁 Hospital_Doctor_Performance_Analysis.sql — Hospital & Doctor Performance
+###  Hospital_Doctor_Performance_Analysis.sql — Hospital & Doctor Performance
 **Business Question:** Which hospitals and doctors are performing well and where are the quality concerns?
 
 Analyzed hospital patient volume and abnormal test result rates using conditional aggregation (SUM CASE WHEN) and HAVING for minimum sample size filtering. Performed doctor workload analysis, above-average billing detection using correlated subqueries, and practiced INNER JOIN and LEFT JOIN with a secondary doctors table.
@@ -129,7 +129,7 @@ Analyzed hospital patient volume and abnormal test result rates using conditiona
 
 ---
 
-### 📁 billing_revenue.sql — Billing & Revenue Cycle Analysis
+###  billing_revenue.sql — Billing & Revenue Cycle Analysis
 **Business Question:** Where is revenue coming from and are there billing anomalies?
 
 Used CTEs (WITH clause) and multiple chained CTEs to analyze billing by condition, insurance provider, and admission type. Detected negative billing anomalies as data quality flags, performed statistical outlier detection using STDDEV, and analyzed year-over-year revenue trends using the LAG window function.
@@ -145,7 +145,7 @@ Used CTEs (WITH clause) and multiple chained CTEs to analyze billing by conditio
 
 ---
 
-### 📁 patient_ranking.sql — Patient Ranking Analysis
+###  patient_ranking.sql — Patient Ranking Analysis
 **Business Question:** How do patients rank across billing and what are the revenue trends over time?
 
 Applied all major window functions — ROW_NUMBER, RANK, DENSE_RANK, NTILE, PARTITION BY, SUM OVER for running totals, and LEAD for sequential billing comparisons — to analyze patient billing rankings and monthly revenue trends.
@@ -161,7 +161,7 @@ Applied all major window functions — ROW_NUMBER, RANK, DENSE_RANK, NTILE, PART
 
 ---
 
-### 📁 Clinical_reporting_views.sql — Clinical Reporting Views
+###  Clinical_reporting_views.sql — Clinical Reporting Views
 **Business Question:** How do we build reusable reporting layers for clinical and operational stakeholders?
 
 Created two persistent views — `patient_summary` and `hospital_performance` — that encapsulate complex queries into reusable virtual tables accessible by any reporting tool or Power BI connection.
@@ -171,7 +171,7 @@ Created two persistent views — `patient_summary` and `hospital_performance` �
 
 ---
 
-### 📁 automated_reports.sql — Stored Procedures & Automated Reports
+###  automated_reports.sql — Stored Procedures & Automated Reports
 **Business Question:** How do we build on-demand reporting infrastructure that any stakeholder can use?
 
 Built two parameterized stored procedures using DELIMITER, CREATE PROCEDURE, IN parameters, BEGIN/END blocks, and CALL statements — enabling dynamic reports for any condition or insurance provider without writing new SQL each time.
@@ -194,7 +194,7 @@ Built two parameterized stored procedures using DELIMITER, CREATE PROCEDURE, IN 
 
 ---
 
-## 📈 Summary of Key Findings
+##  Summary of Key Findings
 
 | Area | Finding |
 |---|---|
