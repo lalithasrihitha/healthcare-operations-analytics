@@ -1,8 +1,6 @@
 #  Healthcare Operations & Revenue Cycle Analytics — MySQL
 
-![MySQL](https://img.shields.io/badge/MySQL-8.0-blue) ![SQL](https://img.shields.io/badge/SQL-Advanced-green) ![Healthcare](https://img.shields.io/badge/Domain-Healthcare%20Analytics-red) ![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
 
----
 
 ##  Project Overview
 
