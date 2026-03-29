@@ -1,9 +1,8 @@
 USE healthcare_project;
 
--- BILLING & REVENUE ANALYSIS
+#BILLING & REVENUE ANALYSIS
 
-
---  Average Billing Per Condition (with negatives)
+Average Billing Per Condition (with negatives)
 WITH condition_billing AS (
     SELECT 
         Medical_condition,
@@ -18,9 +17,8 @@ WITH condition_billing AS (
 SELECT * FROM condition_billing
 ORDER BY Avg_Billing DESC;
 
--- ------------------------------------------------
 
--- Clean Billing - Remove Negative Amounts
+ #Clean Billing - Remove Negative Amounts
 WITH clean_billing AS (
     SELECT *
     FROM patients
@@ -37,9 +35,9 @@ FROM clean_billing
 GROUP BY Medical_condition
 ORDER BY Avg_Billing DESC;
 
--- ------------------------------------------------
 
---  Billing by Insurance Provider
+
+# Billing by Insurance Provider
 WITH insurance_billing AS (
     SELECT 
         Insurance_provider,
@@ -55,8 +53,8 @@ SELECT *,
 FROM insurance_billing
 ORDER BY Avg_Billing DESC;
 
--- Billing Outlier Detection
--- Patients billed more than 2 standard deviations above average
+# Billing Outlier Detection
+#Patients billed more than 2 standard deviations above average
 WITH avg_billing AS (
     SELECT 
         Medical_condition,
@@ -84,7 +82,7 @@ ORDER BY Billing_amount DESC
 LIMIT 10;
 
 
---  Billing by Admission Type
+# Billing by Admission Type
 WITH admission_billing AS (
     SELECT 
         Admission_type,
@@ -100,7 +98,7 @@ SELECT *,
 FROM admission_billing
 ORDER BY Avg_Billing DESC;
 
---  Yearly Revenue Trend with LAG
+#Yearly Revenue Trend with LAG
 WITH yearly_revenue AS (
     SELECT 
         YEAR(Date_of_Admission) AS Admission_Year,
