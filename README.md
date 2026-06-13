@@ -207,3 +207,11 @@ Built two parameterized stored procedures using DELIMITER, CREATE PROCEDURE, IN 
 | Billing Anomaly | One doctor identified billing $27,224 above hospital average |
 
 ---
+##  Power BI Dashboard
+
+This project includes an interactive Power BI dashboard built on the SQL analysis above, covering:
+- Patient Risk & Quality Overview
+- Clinical Outcomes & Demographics  
+- Billing & Revenue Cycle Analytics
+- Data Quality Anomaly Detection (108 flagged records)
+
